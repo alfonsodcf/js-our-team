@@ -1,16 +1,3 @@
-/* <div class="team-card">
-    <div class="card-image">
-    <img
-        src="img/wayne-barnett-founder-ceo.jpg"
-        alt="Wayne Barnett"
-    />
-    </div>
-    <div class="card-text">
-        <h3>Wayne Barnett</h3>
-        <p>Founder & CEO</p>
-    </div>
-</div>  */
-
 
 team = [
     {
@@ -51,24 +38,29 @@ team = [
     
 ]
 
+/* <div class="team-card">
+    <div class="card-image">
+    <img
+        src="img/wayne-barnett-founder-ceo.jpg"
+        alt="Wayne Barnett"
+    />
+    </div>
+    <div class="card-text">
+        <h3>Wayne Barnett</h3>
+        <p>Founder & CEO</p>
+    </div>
+</div>  */
+
 
 console.log(team[1].img);
-let stampa = stampaCard();
 
-
+const teamContainer = document.querySelector('.team-container');
+console .log(teamContainer);
 
 function stampaCard(){
-    let teamContainer = document.getElementsByClassName('team-container');
-    let card = creaCard();
-    console.log(card)
-    teamContainer.innerHTML = card;
-    
-}
-
-function creaCard(){
-    let card = '';
-    for(let i = 1; i < card.length; i++){
-        card +=  `
+    for(let i = 0; i < team.length; i++){
+        //console.log(team[i]);
+        teamContainer.innerHTML += `
             <div class="team-card">
                 <div class="card-image">
                     <img
@@ -82,9 +74,9 @@ function creaCard(){
                 </div>
             </div>
         `;
-    }
-    return card;
-    
-}
 
+    }
+};
+
+stampaCard ();
 
